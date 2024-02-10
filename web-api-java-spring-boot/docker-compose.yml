@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql:8.0.23
+    platform: linux/x86_64
+    container_name: upsidr-coding-test-mysql
+    ports:
+      - "13306:3306"
+    environment:
+      MYSQL_DATABASE: 'upsidr-coding-test'
+      MYSQL_USER: 'upsidr'
+      MYSQL_PASSWORD: 'P1z5G0eloynOrqWy'
+      MYSQL_ROOT_PASSWORD: 'xBUVMqwBdq78jVEO'
+    volumes:
+      - mysql_test_data:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  mysql_test_data:
+

@@ -1,0 +1,11 @@
+# Build
+.gradle/
+build/
+
+# IDE
+.idea/
+
+# Mac
+.DS_Store
+
+
